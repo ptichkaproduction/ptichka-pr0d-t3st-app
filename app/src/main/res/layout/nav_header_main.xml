@@ -31,6 +31,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver 0.4 alpha  fix 1 by PerryBallo0n" />
+        android:text="Ver 0.4 alpha fix 2 by PerryBallo0n, \"fix 2\" by cyberbread-ru" />
 
 </LinearLayout>

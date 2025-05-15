@@ -92,7 +92,7 @@
             android:layout_height="62dp"
             android:layout_marginTop="89dp"
             android:fontFamily="sans-serif-condensed"
-            android:text='Welcome to the "Ptichka Production" t3st app!  :)'
+            android:text='Welcome to "Ptichka Production" t3st app! :)'
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -105,7 +105,7 @@
             android:layout_width="304dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="255dp"
-            android:text="Perry's telegram username: @PerryTheBalloon"
+            android:text="Perry's telegram: @PerryTheBalloon"
             android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -116,7 +116,7 @@
             android:layout_width="304dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="211dp"
-            android:text="Please report any bugs you find in this application to Perry Balloon"
+            android:text="Please report any bugs you find Perry Balloon"
             android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -127,7 +127,7 @@
             android:layout_width="304dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="166dp"
-            android:text="This is a t3st. Just t3st application by Perry Ballo0n, CEO of Ptichka Production :3"
+            android:text="This is a t3st. Just a t3st app by Perry Ballo0n, CEO of Ptichka Production :3"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
