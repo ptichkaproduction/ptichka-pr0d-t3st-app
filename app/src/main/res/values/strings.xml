@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">pti4kaPr0dTesting</string>
+    <string name="hello_from_ptichka_production">Hello from Ptichka Production!</string>
+    <string name="wow">WOW!</string>
+    <string name="application_version_0_1_alpha">Application Version: 0.1 alpha</string>
+    <string name="back">Back</string>
+    <string name="created_by">Created by</string>
+    <string name="ptichka_production_logo">Ptichka Production logo</string>
+    <string name="app_ver">App ver</string>
+    <string name="test">Test</string>
+    <string name="text1">text1</string>
+    <string name="text2">text23</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

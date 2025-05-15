@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pti4ka.ballo0n.balloon">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="pti4ka-T3sting"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VersionActivity"
+            android:label="@layout/version">
+    </activity>
+
+        <activity
+            android:name=".OmgActivity"
+            android:label="@layout/omg">
+        </activity>
+
+        <activity
+            android:name=".CheckerActivity"
+            android:label="@layout/keyboard_checker">
+        </activity>
+
+
+        <activity
+            android:name=".TestActivity"
+            android:label="@layout/test_activity">
+        </activity>
+
+    </application>
+
+</manifest>
