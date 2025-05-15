@@ -15,7 +15,6 @@
         android:layout_height="52dp"
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/ptichka_production_logo"
-        android:onClick="startOmgActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintLeft_toLeftOf="parent"

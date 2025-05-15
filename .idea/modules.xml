@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Balloon.iml" filepath="$PROJECT_DIR$/Balloon.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ptichka-pr0d-t3st-app.iml" filepath="$PROJECT_DIR$/ptichka-pr0d-t3st-app.iml" />
     </modules>
   </component>
 </project>

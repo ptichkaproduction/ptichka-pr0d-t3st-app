@@ -21,6 +21,7 @@
         android:id="@+id/imageView" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
@@ -31,6 +32,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver 0.4 alpha fix 2 by PerryBallo0n, \"fix 2\" by cyberbread-ru" />
+        android:text="Ver 0.4.1 alpha by perryBallo0n" />
 
 </LinearLayout>
