@@ -25,9 +25,9 @@ public class TestActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(TestActivity.this);
-                builder.setTitle("EXIT FROM THIS T3ST");
-                builder.setMessage("Do you want to exit ??");
-                builder.setPositiveButton("YEAH!", new DialogInterface.OnClickListener() {
+                builder.setTitle("EXIT FROM THIS T3ST???");
+                builder.setMessage("Are you sure you want to exit??");
+                builder.setPositiveButton("HECK YEAH!", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
@@ -35,7 +35,7 @@ public class TestActivity extends AppCompatActivity {
 
                 }
             });
-                builder.setNegativeButton("No, thank you", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("No, thanks!", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
