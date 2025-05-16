@@ -9,13 +9,13 @@ android {
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
         versionCode 1
-        versionName "0.4.1 alpha"
+        versionName "0.5 alpha"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     repositories {
         jcenter()
-            maven {url 'https://repo1.maven.org/maven2'}
+        maven { url 'https://repo1.maven.org/maven2' }
 
     }
     buildTypes {
@@ -34,7 +34,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support:support-vector-drawable:25.3.1'
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
     compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
 }

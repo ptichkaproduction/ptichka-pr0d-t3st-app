@@ -18,25 +18,16 @@
         </activity>
         <activity
             android:name=".VersionActivity"
-            android:label="@layout/version">
-    </activity>
-
+            android:label="@layout/activity_version"></activity>
         <activity
             android:name=".OmgActivity"
-            android:label="@layout/omg">
-        </activity>
-
+            android:label="@layout/omg"></activity>
         <activity
             android:name=".CheckerActivity"
-            android:label="@layout/keyboard_checker">
-        </activity>
-
-
+            android:label="@layout/activity_checker"></activity>
         <activity
             android:name=".TestActivity"
-            android:label="@layout/test_activity">
-        </activity>
-
+            android:label="@layout/test_activity"></activity>
     </application>
 
 </manifest>

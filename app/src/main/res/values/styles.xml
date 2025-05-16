@@ -8,13 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="easter" parent="Theme.AppCompat.NoActionBar" >
+    <style name="easter" parent="Theme.AppCompat.NoActionBar">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorForEasterEggDark</item>
         <item name="colorPrimary">@color/colorForEasterEgg</item>
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 </resources>
