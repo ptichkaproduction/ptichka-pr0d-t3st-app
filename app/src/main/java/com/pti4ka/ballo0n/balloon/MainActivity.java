@@ -1,5 +1,6 @@
 package com.pti4ka.ballo0n.balloon;
 
+import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +15,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.TextView;
 import android.view.MenuItem;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,7 +31,10 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Pti4ka Pr0duction t3st app");
 
-
+        BluetoothAdapter myDevice = BluetoothAdapter.getDefaultAdapter();
+        String devicename = myDevice.getName();
+        TextView textview = (TextView) findViewById(R.id.AndroidVer);
+        textview.setText("btw Your device name is: " + devicename );
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
