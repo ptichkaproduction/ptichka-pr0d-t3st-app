@@ -108,6 +108,9 @@ public class CheckerActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_info) {
             startActivity(new Intent(CheckerActivity.this, VersionActivity.class));
+
+        } else if (id == R.id.nav_device) {
+            startActivity(new Intent(CheckerActivity.this, DeviceActivity.class));
         }
 
 

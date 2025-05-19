@@ -70,11 +70,13 @@ public class VersionActivity extends AppCompatActivity
             startActivity(new Intent(VersionActivity.this, MainActivity.class));
 
         } else if (id == R.id.nav_checker) {
-
             startActivity(new Intent(VersionActivity.this, CheckerActivity.class));
 
         } else if (id == R.id.nav_info) {
             startActivity(new Intent(VersionActivity.this, VersionActivity.class));
+
+        } else if (id == R.id.nav_device) {
+            startActivity(new Intent(VersionActivity.this, DeviceActivity.class));
         }
 
 

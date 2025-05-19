@@ -9,8 +9,14 @@
             android:title="Home" />
 
         <item
+            android:id="@+id/nav_device"
+            android:icon="@drawable/devices"
+            android:title="Device info" />
+
+
+        <item
             android:id="@+id/nav_checker"
-            android:icon="@drawable/start"
+            android:icon="@drawable/keyboard"
             android:title="Keyboard checker =D" />
 
     </group>

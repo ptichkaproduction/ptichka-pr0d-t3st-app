@@ -21,6 +21,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@xml/content_version"/>
+    <include layout="@layout/content_version"/>
 
 </android.support.design.widget.CoordinatorLayout>
