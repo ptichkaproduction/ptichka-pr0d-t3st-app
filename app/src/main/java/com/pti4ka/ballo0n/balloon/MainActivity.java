@@ -141,6 +141,29 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_device) {
             startActivity(new Intent(MainActivity.this, DeviceActivity.class));
+        } else if (id == R.id.nav_exit) {
+
+                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("EXIT FROM THIS T3ST???");
+                builder.setMessage("Are you sure you want to exit ??");
+                builder.setPositiveButton("HECK YEAH!", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        finish();
+
+                    }
+                });
+                builder.setNegativeButton("No, thanks!", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        dialogInterface.dismiss();
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
         }
 
 

@@ -2,12 +2,14 @@ package com.pti4ka.ballo0n.balloon;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -134,11 +136,71 @@ public class DeviceActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_device) {
             startActivity(new Intent(DeviceActivity.this, DeviceActivity.class));
+        } else if (id == R.id.nav_exit) {
+
+            final AlertDialog.Builder builder = new AlertDialog.Builder(DeviceActivity.this);
+            builder.setTitle("EXIT FROM THIS T3ST???");
+            builder.setMessage("Are you sure you want to exit ??");
+            builder.setPositiveButton("HECK YEAH!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    finish();
+
+                }
+            });
+            builder.setNegativeButton("No, thanks!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    dialogInterface.dismiss();
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
         }
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_setting) {
+
+            final AlertDialog.Builder builder = new AlertDialog.Builder(DeviceActivity.this);
+            builder.setTitle("EXIT FROM THIS T3ST???");
+            builder.setMessage("Are you sure you want to exit ??");
+            builder.setPositiveButton("HECK YEAH!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    finish();
+
+                }
+            });
+            builder.setNegativeButton("No, thanks!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    dialogInterface.dismiss();
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }
