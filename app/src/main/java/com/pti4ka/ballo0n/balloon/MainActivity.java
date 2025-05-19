@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Pti4ka Pr0d utility");
 
+        if( getIntent().getBooleanExtra("Exit", false)){
+            finish();
+        }
+
         BluetoothAdapter myDevice = BluetoothAdapter.getDefaultAdapter();
         String devicename = myDevice.getName();
         TextView textview = (TextView) findViewById(R.id.DeviceName);
@@ -103,6 +107,10 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
+                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("Exit", true);
+                    startActivity(intent);
                     finish();
 
                 }
@@ -150,6 +158,10 @@ public class MainActivity extends AppCompatActivity
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
+                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.putExtra("Exit", true);
+                        startActivity(intent);
                         finish();
 
                     }
