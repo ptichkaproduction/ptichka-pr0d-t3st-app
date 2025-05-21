@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#211057</color>
-    <color name="colorForEasterEgg">#23470c</color>
-    <color name="colorForEasterEggDark">#306310</color>
-    <color name="colorPrimaryDark">#2c1a66</color>
+    <color name="colorPrimary">#143987</color>
+    <color name="colorForEasterEgg">#306310</color>
+    <color name="colorForEasterEggDark">#23470c</color>
+    <color name="colorPrimaryDark">#0f2d6b</color>
     <color name="colorAccent">#a7c2db</color>
 </resources>

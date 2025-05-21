@@ -15,7 +15,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.net.Uri;
 import android.widget.TextView;
+import android.widget.ImageView;
 import android.view.MenuItem;
 
 import org.w3c.dom.Text;
@@ -111,6 +113,7 @@ public class MainActivity extends AppCompatActivity
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("Exit", true);
                     startActivity(intent);
+                    finishAffinity();
                     finish();
 
                 }
@@ -129,7 +132,14 @@ public class MainActivity extends AppCompatActivity
 
 
         return super.onOptionsItemSelected(item);
+
     }
+
+
+    public void goToPti4kaPr0d(View view) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://ptichkaproduction.github.io")));
+    }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -151,32 +161,34 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this, DeviceActivity.class));
         } else if (id == R.id.nav_exit) {
 
-                final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("EXIT FROM THIS T3ST???");
-                builder.setMessage("Are you sure you want to exit ??");
-                builder.setPositiveButton("HECK YEAH!", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("EXIT FROM THIS T3ST???");
+            builder.setMessage("Are you sure you want to exit ??");
+            builder.setPositiveButton("HECK YEAH!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
 
-                        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        intent.putExtra("Exit", true);
-                        startActivity(intent);
-                        finish();
+                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("Exit", true);
+                    startActivity(intent);
+                    finishAffinity();
+                    finish();
 
-                    }
-                });
-                builder.setNegativeButton("No, thanks!", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                }
+            });
+            builder.setNegativeButton("No, thanks!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
 
-                        dialogInterface.dismiss();
-                    }
-                });
+                    dialogInterface.dismiss();
+                }
+            });
 
-                AlertDialog dialog = builder.create();
-                dialog.show();
+            AlertDialog dialog = builder.create();
+            dialog.show();
         }
+
 
 
 

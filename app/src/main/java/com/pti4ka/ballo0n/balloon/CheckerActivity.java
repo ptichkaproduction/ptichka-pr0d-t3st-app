@@ -26,7 +26,7 @@ public class CheckerActivity extends AppCompatActivity
     private EditText editText;
     private TextView textView;
     private Button button;
-    private String secretCode = "perryBallo0n"; // замени на свою фразу!
+    private String secretCode = "perryBallo0n";
 
 
     @Override
@@ -36,7 +36,6 @@ public class CheckerActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarChecker);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Keyboard checker =D");
-
 
         editText = (EditText) findViewById(R.id.editText);
         textView = (TextView) findViewById(R.id.checker);
@@ -50,7 +49,7 @@ public class CheckerActivity extends AppCompatActivity
                 if (text.equals(secretCode)) {
                     textView.setText("OMG!!!");
                     startActivity(new Intent(CheckerActivity.this, OmgActivity.class));
-                    // ура! пасхалка!
+                    // ура, пасхалка
                     Toast.makeText(CheckerActivity.this, "Well, you found it. Congratulations!", Toast.LENGTH_SHORT).show();
                 } else {
                     // обычный текст
@@ -126,6 +125,7 @@ public class CheckerActivity extends AppCompatActivity
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("Exit", true);
                     startActivity(intent);
+                    finishAffinity();
                     finish();
 
                 }
@@ -169,6 +169,7 @@ public class CheckerActivity extends AppCompatActivity
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("Exit", true);
                     startActivity(intent);
+                    finishAffinity();
                     finish();
 
                 }

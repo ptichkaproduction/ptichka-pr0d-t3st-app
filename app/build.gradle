@@ -9,7 +9,7 @@ android {
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
         versionCode 1
-        versionName "0.6 Nightly Alpha"
+        versionName "0.6.1 Alpha"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 

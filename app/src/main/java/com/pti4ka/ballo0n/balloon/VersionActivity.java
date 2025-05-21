@@ -92,6 +92,7 @@ public class VersionActivity extends AppCompatActivity
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("Exit", true);
                     startActivity(intent);
+                    finishAffinity();
                     finish();
 
                 }
@@ -135,6 +136,7 @@ public class VersionActivity extends AppCompatActivity
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     intent.putExtra("Exit", true);
                     startActivity(intent);
+                    finishAffinity();
                     finish();
 
                 }

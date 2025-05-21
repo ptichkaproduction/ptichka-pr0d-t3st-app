@@ -27,6 +27,12 @@
                 android:id="@+id/nav_info"
                 android:icon="@drawable/info"
                 android:title="About app" />
+
+
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/logout"
+                android:title="Exit" />
         </menu>
     </item>
 
