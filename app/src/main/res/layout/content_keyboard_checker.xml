@@ -66,21 +66,9 @@
             android:id="@+id/sumbit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="316dp"
+            android:layout_marginBottom="319dp"
             android:onClick="check"
             android:text="Submit"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.931"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="17dp"
-            android:onClick="startMainActivity"
-            android:text="Back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.931"
             app:layout_constraintLeft_toLeftOf="parent"

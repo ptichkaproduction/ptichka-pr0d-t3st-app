@@ -12,16 +12,15 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:gravity="bottom"
     android:weightSum="1"
-    android:baselineAligned="false"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="74dp"
-        android:layout_height="46dp"
-        android:layout_weight="1"
+        android:layout_width="84dp"
+        android:layout_height="match_parent"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/icon" />
+        app:srcCompat="@drawable/icon"
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/textView3"
@@ -35,6 +34,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver 0.6.1 Alpha by perryBallo0n" />
+        android:text="Ver 0.7 Alpha by perryBallo0n" />
 
 </LinearLayout>

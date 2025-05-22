@@ -15,10 +15,10 @@
             android:layout_width="301dp"
             android:layout_height="39dp"
             android:layout_marginTop="83dp"
-            android:text="App Version: 0.6.1 Alpha"
+            android:text="App Version: 0.7 Alpha"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,10 +27,10 @@
             android:id="@+id/textView10"
             android:layout_width="301dp"
             android:layout_height="56dp"
-            android:layout_marginTop="122dp"
+            android:layout_marginTop="173dp"
             android:text="Created by Perry Balloon (Ptichka Production CEO)"
             android:textSize="16sp"
-            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,10 +39,10 @@
             android:id="@+id/textView11"
             android:layout_width="301dp"
             android:layout_height="51dp"
-            android:layout_marginTop="176dp"
+            android:layout_marginTop="122dp"
             android:text="Made in Android Studio 2.3.2 (2017) with Java"
             android:textSize="16sp"
-            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -73,26 +73,14 @@
             app:layout_constraintRight_toRightOf="parent" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="startMainActivity"
-            android:text="Back"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.931"
-            android:layout_marginBottom="16dp" />
-
-        <Button
             android:id="@+id/testingApparatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="67dp"
+            android:layout_marginBottom="17dp"
             android:onClick="toGoTestingApparatus"
             android:text="Testing apparatus"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.894"
+            app:layout_constraintHorizontal_bias="0.92"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
 

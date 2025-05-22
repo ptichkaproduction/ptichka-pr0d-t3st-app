@@ -62,10 +62,10 @@ public class VersionActivity extends AppCompatActivity
     public void toGoTestingApparatus(View view) {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(VersionActivity.this);
-        builder.setTitle("TESTING APPARATUS:");
-        builder.setMessage("- Sony Xperia Miro (Android 4.0.4)\n- Nokia 3 (Android 9.0)\n- Galaxy S10 (Android 12)\n- Redmi 10C (Android 15)");
+        builder.setTitle("TESTING APPARATUS LIST:");
+        builder.setMessage("- Sony Xperia Miro (Android 4.0.4)\n- Nokia 3 (Android 9.0)\n- Galaxy S10 (Android 12)\n- Honor Pad 8 (Android 12)\n- Honor 50 Lite (Android 13)\n- Redmi 10C (Android 15)\n- Pixel 7 (Baklava (ZP1A.250307.002))");
         builder.setCancelable(false);
-        builder.setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int i) {
 
                 dialog.cancel();
