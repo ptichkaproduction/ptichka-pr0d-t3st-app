@@ -11,18 +11,6 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView23"
-            android:layout_width="301dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="311dp"
-            android:text="- Galaxy S10 (Android 12)"
-            android:textSize="16sp"
-            app:layout_constraintHorizontal_bias="0.36"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/textView5"
             android:layout_width="301dp"
             android:layout_height="39dp"
@@ -58,66 +46,6 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="301dp"
-            android:layout_height="18dp"
-            android:layout_marginTop="227dp"
-            android:text="This application is tested on:"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.36" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="301dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="255dp"
-            android:text="- Sony Xperia Miro (Android 4.0.4)"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.36" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="301dp"
-            android:layout_height="19dp"
-            android:layout_marginTop="368dp"
-            android:text="And some more devices ;)"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.36" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="301dp"
-            android:layout_height="19dp"
-            android:layout_marginTop="340dp"
-            android:text="- Redmi 10C (Android 15)"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.36" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="301dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="283dp"
-            android:text="- Nokia 3 (Android 9.0)"
-            android:textSize="16sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.36" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -155,6 +83,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.931"
             android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/testingApparatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="67dp"
+            android:onClick="toGoTestingApparatus"
+            android:text="Testing apparatus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.894"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 

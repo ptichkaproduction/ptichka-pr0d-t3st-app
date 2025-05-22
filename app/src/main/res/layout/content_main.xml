@@ -40,7 +40,7 @@
         android:layout_height="62dp"
         android:layout_marginTop="25dp"
         android:fontFamily="sans-serif-condensed"
-        android:text='Welcome to the "Ptichka Production" utility app! :)'
+        android:text='Welcome to the "Ptichka Production" utility! :)'
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -64,7 +64,7 @@
         android:layout_width="304dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="102dp"
-        android:text="This is just a t3st test utility app by Perry Ballo0n, CEO of Ptichka Production :3"
+        android:text="This is just an experimental utility app by Perry Ballo0n, CEO of Ptichka Production :3"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

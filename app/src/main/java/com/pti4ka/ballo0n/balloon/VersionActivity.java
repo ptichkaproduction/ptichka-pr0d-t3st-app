@@ -59,6 +59,24 @@ public class VersionActivity extends AppCompatActivity
         startActivity(new Intent(VersionActivity.this, MainActivity.class));
     }
 
+    public void toGoTestingApparatus(View view) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(VersionActivity.this);
+        builder.setTitle("TESTING APPARATUS:");
+        builder.setMessage("- Sony Xperia Miro (Android 4.0.4)\n- Nokia 3 (Android 9.0)\n- Galaxy S10 (Android 12)\n- Redmi 10C (Android 15)");
+        builder.setCancelable(false);
+        builder.setNeutralButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int i) {
+
+                dialog.cancel();
+            }
+        });
+
+
+        AlertDialog dialog1 = builder.create();
+        dialog1.show();
+    }
+
 
 
     @SuppressWarnings("StatementWithEmptyBody")
