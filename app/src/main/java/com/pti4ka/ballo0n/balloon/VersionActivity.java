@@ -1,6 +1,7 @@
 package com.pti4ka.ballo0n.balloon;
 
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,10 +14,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.content.Intent;
+import android.widget.EditText;
 
 public class VersionActivity extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener{
+
+    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String NICKNAME_KEY = "nickname";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,36 @@ public class VersionActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
+
+    private void showNicknameDialog() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("TYPE YOUR NICKNAME HERE:");
+
+        final EditText input = new EditText(this);
+        alert.setView(input);
+
+        alert.setPositiveButton("SUBMIT", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String nickname = input.getText().toString();
+
+                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(NICKNAME_KEY, nickname);
+                editor.apply();
+
+            }
+        });
+
+        alert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                dialogInterface.dismiss();
+            }
+        });
+
+        alert.show();
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -168,7 +204,9 @@ public class VersionActivity extends AppCompatActivity
             });
 
             AlertDialog dialog = builder.create();
-            dialog.show();
+
+        } else if (id == R.id.editNickname) {
+            showNicknameDialog();
         }
 
 

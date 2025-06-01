@@ -15,7 +15,7 @@
             android:layout_width="301dp"
             android:layout_height="39dp"
             android:layout_marginTop="83dp"
-            android:text="App Version: 0.7 Alpha"
+            android:text="App Version: 0.8 Alpha"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintHorizontal_bias="0.526"

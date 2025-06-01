@@ -1,9 +1,11 @@
 package com.pti4ka.ballo0n.balloon;
 
 import android.bluetooth.BluetoothAdapter;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PowerManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -16,14 +18,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.net.Uri;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.view.MenuItem;
 
 import org.w3c.dom.Text;
+import android.content.SharedPreferences;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String NICKNAME_KEY = "nickname";
 
 
     String _OSVERSION = System.getProperty("os.version");
@@ -68,7 +76,78 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        String nickname = settings.getString(NICKNAME_KEY, null);
+
+        if (nickname == null) {
+
+            TextView welcome = (TextView) findViewById(R.id.welcome);
+            welcome.setText("Hello, and welcome to the Pti4ka Prod utility!");
+            showNicknameDialog();
+
+        } else if (nickname == "") {
+
+            TextView welcome = (TextView) findViewById(R.id.welcome);
+            welcome.setText("Hello, and welcome to the Pti4ka Prod utility!");
+
+        } else if (nickname == " ") {
+
+            TextView welcome = (TextView) findViewById(R.id.welcome);
+            welcome.setText("Hello, and welcome to the Pti4ka Prod utility!");
+        }
+
+        else {
+
+            TextView welcome = (TextView) findViewById(R.id.welcome);
+            welcome.setText("Hello, " + nickname + ", and welcome to the Pti4ka Prod utility!");
+        }
     }
+
+    private void showNicknameDialog() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("TYPE YOUR NICKNAME HERE:");
+
+        final EditText input = new EditText(this);
+        alert.setView(input);
+
+        alert.setPositiveButton("SUBMIT", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String nickname = input.getText().toString();
+
+                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(NICKNAME_KEY, nickname);
+                editor.apply();
+
+                if (nickname == "") {
+
+                    TextView welcome = (TextView) findViewById(R.id.welcome);
+                    welcome.setText("Hello, and welcome to the Pti4ka Prod utility!");
+
+                } else if (nickname == " ") {
+
+                    TextView welcome = (TextView) findViewById(R.id.welcome);
+                    welcome.setText("Hello, and welcome to the Pti4ka Prod utility!");
+
+                } else {
+
+                TextView welcome = (TextView) findViewById(R.id.welcome);
+                welcome.setText("Hello, " + nickname +", and welcome to the Pti4ka Prod utility!");
+                }
+            }
+        });
+
+        alert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                dialogInterface.dismiss();
+            }
+        });
+
+        alert.show();
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -100,10 +179,11 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+
         if (id == R.id.action_setting) {
 
             final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("EXIT FROM THIS T3ST???");
+            builder.setTitle("EXIT FROM THIS UTILITY???");
             builder.setMessage("Are you sure you want to exit ??");
             builder.setPositiveButton("HECK YEAH!", new DialogInterface.OnClickListener() {
                 @Override
@@ -128,11 +208,18 @@ public class MainActivity extends AppCompatActivity
 
             AlertDialog dialog = builder.create();
             dialog.show();
+
+        } else if (id == R.id.reboot) {
+            PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
+            powerManager.reboot(null);
+
+        } else if (id == R.id.editNickname) {
+            showNicknameDialog();
         }
 
 
-        return super.onOptionsItemSelected(item);
 
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -159,10 +246,11 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_device) {
             startActivity(new Intent(MainActivity.this, DeviceActivity.class));
+
         } else if (id == R.id.nav_exit) {
 
             final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("EXIT FROM THIS T3ST???");
+            builder.setTitle("EXIT FROM THIS UTILITY???");
             builder.setMessage("Are you sure you want to exit ??");
             builder.setPositiveButton("HECK YEAH!", new DialogInterface.OnClickListener() {
                 @Override

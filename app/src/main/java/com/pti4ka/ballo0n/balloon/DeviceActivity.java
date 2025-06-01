@@ -4,6 +4,8 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothClass;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,11 +17,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class DeviceActivity extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener{
+
+    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String NICKNAME_KEY = "nickname";
+
 
     String _OSVERSION = System.getProperty("os.version");
     String _RELEASE = android.os.Build.VERSION.RELEASE;
@@ -34,6 +41,7 @@ public class DeviceActivity extends AppCompatActivity
     String _HARDWARE = android.os.Build.HARDWARE;
     String _ID = android.os.Build.ID;
     String _MANUFACTURER = android.os.Build.MANUFACTURER;
+    String _TYPE = Build.TYPE;
     String _SERIAL = android.os.Build.SERIAL;
     String _USER = android.os.Build.USER;
     String _HOST = android.os.Build.HOST;
@@ -89,9 +97,40 @@ public class DeviceActivity extends AppCompatActivity
         TextView id = (TextView) findViewById(R.id.id);
         id.setText("ID: " +  _ID );
 
+        TextView user = (TextView) findViewById(R.id.user);
+        user.setText("User: " +  _USER );
+
 
     }
 
+    private void showNicknameDialog() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("TYPE YOUR NICKNAME HERE:");
+
+        final EditText input = new EditText(this);
+        alert.setView(input);
+
+        alert.setPositiveButton("SUBMIT", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String nickname = input.getText().toString();
+
+                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(NICKNAME_KEY, nickname);
+                editor.apply();
+
+            }
+        });
+
+        alert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                dialogInterface.dismiss();
+            }
+        });
+
+        alert.show();
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -208,6 +247,8 @@ public class DeviceActivity extends AppCompatActivity
 
             AlertDialog dialog = builder.create();
             dialog.show();
+        } else if (id == R.id.editNickname) {
+            showNicknameDialog();
         }
 
 

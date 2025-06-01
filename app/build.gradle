@@ -4,12 +4,12 @@ android {
     compileSdkVersion 25
     buildToolsVersion "36.0.0"
     defaultConfig {
-        applicationId "com.pti4ka.ballo0n.balloon"
+        applicationId "com.pti4ka.balloon.balloon"
         minSdkVersion 14
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 25
         versionCode 1
-        versionName "0.7 Alpha"
+        versionName "0.8 Alpha"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 

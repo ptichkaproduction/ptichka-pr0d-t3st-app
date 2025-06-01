@@ -34,6 +34,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver 0.7 Alpha by perryBallo0n" />
+        android:text="Ver 0.8 Alpha by perryBallo0n" />
 
 </LinearLayout>

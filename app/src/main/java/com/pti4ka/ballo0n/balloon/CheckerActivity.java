@@ -2,6 +2,7 @@ package com.pti4ka.ballo0n.balloon;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -27,6 +28,12 @@ public class CheckerActivity extends AppCompatActivity
     private TextView textView;
     private Button button;
     private String secretCode = "perryBallo0n";
+
+
+    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String NICKNAME_KEY = "nickname";
+
+
 
 
     @Override
@@ -76,6 +83,35 @@ public class CheckerActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+    private void showNicknameDialog() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("TYPE YOUR NICKNAME HERE:");
+
+        final EditText input = new EditText(this);
+        alert.setView(input);
+
+        alert.setPositiveButton("SUBMIT", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String nickname = input.getText().toString();
+
+                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString(NICKNAME_KEY, nickname);
+                editor.apply();
+
+            }
+        });
+
+        alert.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                dialogInterface.dismiss();
+            }
+        });
+
+        alert.show();
     }
 
     @Override
@@ -184,6 +220,9 @@ public class CheckerActivity extends AppCompatActivity
 
             AlertDialog dialog = builder.create();
             dialog.show();
+
+        } else if (id == R.id.editNickname) {
+            showNicknameDialog();
         }
 
 

@@ -2,6 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item android:title="Power">
+        <menu>
+            <item
+                android:id="@+id/shutdown"
+                android:orderInCategory="102"
+                android:title="Shutdown" />
+
+
+            <item
+                android:id="@+id/reboot"
+                android:orderInCategory="102"
+                android:title="Reboot" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/editNickname"
+        android:orderInCategory="102"
+        android:title="Edit nickname" />
+
     <item
         android:id="@+id/action_setting"
         android:orderInCategory="102"
